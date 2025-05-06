@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0; /* Black text for light mode */
+  --background-start-rgb: 255, 254, 253; /* Clear white with a very subtle pink hue */
+  --background-end-rgb: 255, 254, 253; /* Clear white with a very subtle pink hue */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 254, 253; /* Clear white with a very subtle pink hue */
+    --background-start-rgb: 5, 10, 20; /* Near-black dark blue */
+    --background-end-rgb: 5, 10, 20; /* Near-black dark blue */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 100% 99%; /* Clear white with subtle pinkish hue */
+    --background-header: 220 100% 97%; /* Slightly darker than background */
+    --foreground: 0 0% 11%; /* Black for text and icons */
+    --card: 0 100% 99%; /* Matches light background */
+    --card-foreground: 0 0% 0%; /* Black for card content */
+    --popover: 0 100% 99%; /* Matches light background */
+    --popover-foreground: 0 0% 0%; /* Black for popovers */
+    --primary: 0 0% 0%; /* Black for primary elements */
+    --primary-foreground: 0 100% 99%; /* Light background for contrast */
+    --secondary: 0 100% 96%; /* Slightly darker light pinkish hue */
+    --secondary-foreground: 0 0% 0%; /* Black */
+    --muted: 0 100% 96%; /* Matches secondary for muted content */
+    --muted-foreground: 240 60% 10%; /* Near-black dark blue for muted foregrounds */
+    --accent: 0 100% 96%; /* Matches secondary */
+    --accent-foreground: 0 0% 0%; /* Black */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 60% 10%; /* Near-black dark blue for separators */
+    --input: 0 100% 99%; /* Matches light background */
+    --ring: 240 60% 10%; /* Near-black dark blue for focus rings */
+    --chart-1: 0 0% 0%; /* Black for charts */
+    --chart-2: 0 0% 10%; /* Slightly lighter black tone for charts */
+    --chart-3: 0 100% 96%; /* Light pinkish hue for charts */
+    --chart-4: 240 30% 30%; /* Complementary tone for charts */
+    --chart-5: 0 100% 97%; /* Subtle pastel pink hue for variety */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 20% 8%; /* Near-black dark blue */
+    --foreground: 0 100% 99%; /* Clear white with subtle pinkish hue */
+    --card: 240 20% 8%; /* Matches dark background */
+    --card-foreground: 0 100% 99%; /* Clear white for card content */
+    --popover: 240 20% 8%; /* Matches dark background */
+    --popover-foreground: 0 100% 99%; /* Clear white for popovers */
+    --primary: 0 100% 99%; /* Clear white for primary elements */
+    --primary-foreground: 240 20% 8%; /* Dark background color for contrast */
+    --secondary: 240 25% 10%; /* Slightly lighter dark blue */
+    --secondary-foreground: 0 100% 99%; /* Clear white */
+    --muted: 240 25% 10%; /* Matches secondary for muted content */
+    --muted-foreground: 0 100% 90%; /* Slightly muted clear white */
+    --accent: 240 25% 10%; /* Matches secondary */
+    --accent-foreground: 0 100% 99%; /* Clear white */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 100% 99%; /* Clear white for separators */
+    --input: 240 20% 8%; /* Matches dark background */
+    --ring: 0 100% 99%; /* Clear white for focus rings */
+    --chart-1: 0 100% 99%; /* Clear white for charts */
+    --chart-2: 0 100% 90%; /* Slightly muted white tone for charts */
+    --chart-3: 240 25% 10%; /* Dark blue for charts */
+    --chart-4: 240 50% 20%; /* Complementary tone for charts */
+    --chart-5: 240 30% 30%; /* Subtle pastel tone for variety */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
