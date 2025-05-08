@@ -25,6 +25,7 @@ import {
   Search,
   Sun,
   Users,
+  User,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -268,7 +269,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center justify-around w-auto max-w-md gap-4 md:gap-7">
           {[
             { icon: HomeIcon, path: "/", name: "home" },
-            { icon: Users, path: "/friends-list", name: "friends" },
+            { icon: UserPlus, path: "/friends-list", name: "Add Connecitons" },
           ].map(({ icon: Icon, path, name }) => (
             <Button
               key={name}
@@ -331,7 +332,7 @@ const Header = () => {
                 onClick={() => user?._id && handleNavigation(`/user-profile/${user._id}`, "profile")}
                 disabled={!user?._id}
               >
-                <Users className="mr-2 h-4 w-4" /> <span>Profile</span>
+                <User className="mr-2 h-4 w-4" /> <span>Profile</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator className="bg-foreground/20" />
               <DropdownMenuItem

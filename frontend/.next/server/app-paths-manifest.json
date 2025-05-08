@@ -1,11 +1,6 @@
 {
   "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/user-login/page": "app/user-login/page.js",
   "/friends-list/page": "app/friends-list/page.js",
-  "/user-profile/[id]/page": "app/user-profile/[id]/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/drop-down/about-us/page": "app/drop-down/about-us/page.js",
-  "/drop-down/privacy-policy/page": "app/drop-down/privacy-policy/page.js",
-  "/drop-down/tnc/page": "app/drop-down/tnc/page.js"
+  "/user-profile/[id]/page": "app/user-profile/[id]/page.js"
 }
